@@ -1851,18 +1851,18 @@ punycode@^2.1.1:
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.3.0.tgz#f67fa67c94da8f4d0cfff981aee4118064199b8f"
   integrity sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==
 
-qqlx-cdk@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.npmjs.org/qqlx-cdk/-/qqlx-cdk-0.0.8.tgz#03aeeba8308ee8f70ddbb90488f48f03447753ca"
-  integrity sha512-yIeZifIcaHfxRULXkCAhOSj1226i6asxvGxq+XiDzutByGu76GJJ4jfc7lNZ0f+GASDqmZuoEMmuKm5gBX3v+Q==
+qqlx-cdk@^0.0.13:
+  version "0.0.13"
+  resolved "https://registry.npmjs.org/qqlx-cdk/-/qqlx-cdk-0.0.13.tgz#29ed720c7a65e38d50bce77f069a418971ae7ba7"
+  integrity sha512-u58ITo9I15L2itpPGdPKpvVM9n2aejdZ0Kl+QMqQdRcrZK2MUAaa64RRgulcfYIwBlkVgqcgXXpKbr8vyQMUOw==
 
-qqlx-core@^1.0.21:
-  version "1.0.21"
-  resolved "https://registry.npmjs.org/qqlx-core/-/qqlx-core-1.0.21.tgz#7fb83f2f2ffd57765adbb251255fc5b75aa53897"
-  integrity sha512-lNL72hjS6ZPC89A5k8ySigCo9qwN7H9b0rK2hyTML5OkRAY/HInJKHslRi+xdgO0X8NsR28EiPrxI4HDqa4TLg==
+qqlx-core@^1.0.28:
+  version "1.0.28"
+  resolved "https://registry.npmjs.org/qqlx-core/-/qqlx-core-1.0.28.tgz#63b2a488bb555a40e970b027ef6a7cf3efbadac6"
+  integrity sha512-xYPAaoUGVD9hH0Y78hPqP3OZW0kcpqApkSSldJwUD4bGhsyy8dVzqDkFJG8L29/mJEWfzU056gGjRRBe1IeOgQ==
   dependencies:
     mongodb "^4.13.0"
-    qqlx-cdk "^0.0.8"
+    qqlx-cdk "^0.0.13"
 
 quasar@^2.11.5:
   version "2.11.6"
