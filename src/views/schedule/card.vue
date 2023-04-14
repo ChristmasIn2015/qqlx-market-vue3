@@ -1,12 +1,12 @@
 <template>
     <div class="q-pl-xs q-mb-sm">
         <div class="text-h5 text-primary text-weight-bold">礼品卡</div>
-        <div class="text-option text-primary">
-            超级管理员可以
+        <div class="text-option text-primary row items-center">
+            仅超级管理员可以操作。
+            <q-space></q-space>
             <q-btn
                 push
                 square
-                class="q-mx-sm"
                 color="negative"
                 @click="
                     () => {
@@ -15,8 +15,8 @@
                     }
                 "
             >
-                添加 </q-btn
-            >新礼品卡。
+                添加
+            </q-btn>
         </div>
     </div>
 
@@ -68,7 +68,7 @@
         </q-card>
     </div>
 
-    <div class="q-pl-xs q-mb-sm">
+    <div class="q-pl-xs q-my-md">
         <div class="text-h5 text-primary text-weight-bold">最近删除</div>
     </div>
     <div class="row">

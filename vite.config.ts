@@ -21,8 +21,18 @@ export default defineConfig({
         },
     },
     server: {
-        port: 3001,
+        port: 3000,
         proxy: {
+            // "/qqlx": {
+            //     target: "https://qqlx.tech",
+            //     changeOrigin: true,
+            //     rewrite: (path) => path,
+            // },
+            "/qqlx/log": {
+                target: "http://127.0.0.1:3003",
+                changeOrigin: true,
+                rewrite: (path) => path,
+            },
             "/qqlx/user": {
                 target: "http://127.0.0.1:3006",
                 changeOrigin: true,

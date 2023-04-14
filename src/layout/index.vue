@@ -63,8 +63,8 @@
                     :to="`/market/${container.path}/${route.path}`"
                     v-slot="{ isActive }"
                 >
-                    <q-item clickable :active="isActive" class="text-primary q-pa-none" :class="{ 'bg-primary': isActive, 'text-white': isActive }">
-                        <q-item-section side class="q-px-sm" :class="{ 'text-primary': !isActive, 'text-white': isActive }">
+                    <q-item clickable :active="isActive" class="text-primary q-pa-none q-pl-md" :class="{ 'bg-primary': isActive, 'text-white': isActive }">
+                        <q-item-section side :class="{ 'text-primary': !isActive, 'text-white': isActive }">
                             <q-icon :name="(route.meta?.icon as string)"> </q-icon>
                         </q-item-section>
                         <q-item-section class="text-weight-bold text-body1" :class="{ 'text-primary': !isActive, 'text-white': isActive }">
