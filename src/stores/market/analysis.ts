@@ -41,7 +41,10 @@ export const useLogAnalysisStore = defineStore({
             try {
                 this.loading = true;
                 const dto: postLogAnalysisDto = this.editor;
-                await request.get(PATH_LOG_ANALYSIS, { dto });
+                await request.post(PATH_LOG_ANALYSIS, { dto });
+
+                this.setEditor();
+                await this.get();
             } catch (error) {
                 NotifyStore.fail((error as Error).message);
             } finally {
