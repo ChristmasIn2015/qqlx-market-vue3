@@ -58,7 +58,7 @@ onMounted(async () => {
                 id: "wx-login",
                 appid: "wxd0e6ee13822ccb7f",
                 scope: "snsapi_login",
-                redirect_uri: "http://qqlx.tech/",
+                redirect_uri: "https://qqlx.tech/market/login",
                 state: "LOGIN",
             });
         console.log(WxLogin, document.getElementById("wx-login"));
