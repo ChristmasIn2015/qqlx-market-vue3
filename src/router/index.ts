@@ -18,6 +18,12 @@ const routes = [
                         component: () => import("@/views/schedule/card.vue"),
                         meta: { icon: "card_giftcard", color: "primary", backColorClass: "color-back-warehouse", show: true },
                     },
+                    {
+                        path: "intro",
+                        name: "说明书",
+                        component: () => import("@/views/intro/intro.vue"),
+                        meta: { icon: "menu_book", color: "primary", backColorClass: "color-back-warehouse", show: true },
+                    },
                 ],
             },
             {
