@@ -14,7 +14,7 @@ const routes = [
                 children: [
                     {
                         path: "card",
-                        name: "礼品卡",
+                        name: "时长卡",
                         component: () => import("@/views/schedule/card.vue"),
                         meta: { icon: "card_giftcard", color: "primary", backColorClass: "color-back-warehouse", show: true },
                     },

@@ -1,6 +1,6 @@
 <template>
     <div class="q-pl-xs q-mb-sm">
-        <div class="text-h5 text-primary text-weight-bold">礼品卡</div>
+        <div class="text-h5 text-primary text-weight-bold">时长卡</div>
         <div class="text-option text-primary row items-center">
             仅超级管理员可以操作。
             <q-space></q-space>
