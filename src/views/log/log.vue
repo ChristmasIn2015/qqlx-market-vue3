@@ -89,6 +89,8 @@
                 { name: 'type', field: 'type', label: '类型', align: 'left' },
                 { name: 'json', field: 'json', label: '内容', align: 'left' },
                 { name: 'chain', field: 'chain', label: '识别码', align: 'left' },
+                { name: 'ip', field: 'ip', label: 'IP', align: 'left' },
+                { name: 'duration', field: 'duration', label: '耗时', align: 'left' },
             ]"
         >
             <template v-slot:header="props">
@@ -118,6 +120,23 @@
                     <q-th :props="props" key="chain">
                         <q-input square filled dense clearable placeholder="识别码" v-model="LogStore.search.chain" @blur="LogStore.get(1)" />
                     </q-th>
+                    <q-th :props="props" key="ip">
+                        <q-input square filled dense clearable placeholder="IP" v-model="LogStore.search.ip" @blur="LogStore.get(1)" />
+                    </q-th>
+                    <q-th
+                        key="duration"
+                        class="text-right cursor-pointer"
+                        :class="{ 'text-negative': LogStore.sortKey === 'duration' }"
+                        @click="
+                            () => {
+                                LogStore.sortValue === MongodbSort.DES ? (LogStore.sortValue = MongodbSort.ASC) : (LogStore.sortValue = MongodbSort.DES);
+                                LogStore.get(1);
+                            }
+                        "
+                    >
+                        <span>{{ "耗时" }}</span>
+                        <q-icon :name="LogStore.sortValue === MongodbSort.DES ? 'south' : 'north'"></q-icon>
+                    </q-th>
                 </q-tr>
             </template>
             <template v-slot:body="props">
@@ -129,6 +148,8 @@
                     </q-td>
                     <q-td key="json" :props="props">{{ props.row.json }}</q-td>
                     <q-td key="chain" :props="props">{{ props.row.chain }}</q-td>
+                    <q-td key="ip" :props="props">{{ props.row.ip }}</q-td>
+                    <q-td key="duration" :props="props">{{ props.row.duration }}</q-td>
                 </q-tr>
             </template>
             <template v-slot:bottom="props">

@@ -16,6 +16,8 @@ function getSchema(): Log {
         path: "",
         chain: "",
         json: "",
+        ip: "",
+        duration: 0,
         ...getMongodbBase(),
     };
 }
@@ -26,6 +28,9 @@ export const useLogStore = defineStore({
         search: getSchema(),
         page: getPage(15),
         total: 0,
+
+        sortKey: "duration",
+        sortValue: MongodbSort.DES,
     }),
     actions: {
         /** @viewcatch */
@@ -36,6 +41,8 @@ export const useLogStore = defineStore({
                 const dto: getLogDto = {
                     search: this.search,
                     page: this.page,
+                    sortKey: this.sortKey,
+                    sortValue: this.sortValue,
                 };
                 const res: getLogRes = await request.get(PATH_LOG, { dto });
                 this.list = res.list;
